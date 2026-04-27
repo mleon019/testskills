@@ -148,3 +148,112 @@ import subprocess; r=subprocess.run(['c:/GAISE/testskills/.venv/Scripts/python.e
 Written to cell A6.
 
 ```
+
+```python
+import subprocess,sys; r=subprocess.run(['c:/GAISE/testskills/.venv/Scripts/python.exe','c:/GAISE/testskills/read_sheet.py','--spreadsheet-id','1LZqrGGenKUehOPihCjnprbPde-KiLfwgtTHiLd0k3lc','A','--json'],capture_output=True,text=True); print(r.stdout if r.stdout else r.stderr)
+```
+
+```output
+[
+  {
+    "row": 1,
+    "value": "Email",
+    "background_color": null
+  },
+  {
+    "row": 2,
+    "value": "mleon019@ikasle.ehu.eus",
+    "background_color": null
+  },
+  {
+    "row": 3,
+    "value": "lgesteira001@ikasle.ehu.eus",
+    "background_color": null
+  },
+  {
+    "row": 4,
+    "value": "prcaj001@ikasle.ehu.eus",
+    "background_color": null
+  },
+  {
+    "row": 5,
+    "value": "juanan.pereira@ehu.eus",
+    "background_color": null
+  },
+  {
+    "row": 6,
+    "value": "test",
+    "background_color": null
+  }
+]
+
+```
+
+```python
+import subprocess,sys; r=subprocess.run(['c:/GAISE/testskills/.venv/Scripts/python.exe','c:/GAISE/testskills/write_sheet.py','--help'],capture_output=True,text=True); print(r.stdout if r.stdout else r.stderr)
+```
+
+```output
+usage: write_sheet.py [-h] --spreadsheet-id SPREADSHEET_ID
+                      [--bg-color BG_COLOR]
+                      column row [value] [worksheet]
+
+Write a value to a Google Sheets cell or only apply cell background
+formatting.
+
+positional arguments:
+  column                Column letter, for example A or I.
+  row                   1-indexed row number.
+  value                 Optional value to write. If omitted, only background
+                        formatting is changed.
+  worksheet             Optional worksheet/tab name. Uses first worksheet if
+                        omitted.
+
+options:
+  -h, --help            show this help message and exit
+  --spreadsheet-id SPREADSHEET_ID
+                        Google Sheets spreadsheet ID.
+  --bg-color BG_COLOR   Background color to apply to the cell as hex (e.g.
+                        #d9ead3).
+
+```
+
+```python
+import subprocess,sys; r=subprocess.run(['c:/GAISE/testskills/.venv/Scripts/python.exe','c:/GAISE/testskills/read_sheet.py','--spreadsheet-id','1LZqrGGenKUehOPihCjnprbPde-KiLfwgtTHiLd0k3lc','A','--json'],capture_output=True,text=True); print(r.stdout if r.stdout else r.stderr)
+```
+
+```output
+[
+  {
+    "row": 1,
+    "value": "Email",
+    "background_color": null
+  },
+  {
+    "row": 2,
+    "value": "mleon019@ikasle.ehu.eus",
+    "background_color": null
+  },
+  {
+    "row": 3,
+    "value": "lgesteira001@ikasle.ehu.eus",
+    "background_color": null
+  },
+  {
+    "row": 4,
+    "value": "prcaj001@ikasle.ehu.eus",
+    "background_color": null
+  },
+  {
+    "row": 5,
+    "value": "juanan.pereira@ehu.eus",
+    "background_color": null
+  },
+  {
+    "row": 6,
+    "value": "test",
+    "background_color": null
+  }
+]
+
+```
